@@ -17,3 +17,13 @@ ansible-navigator run snmp.yml
 ```bash
 ansible-navigator run l3_interface.yml
 ```
+
+## Banner
+
+```bash
+ansible-navigator run banner.yml
+```
+
+## Models
+
+- [resource_module_models](https://github.com/ansible-network/resource_module_models/tree/master/models)

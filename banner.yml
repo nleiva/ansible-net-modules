@@ -1,0 +1,26 @@
+- name: Configure a Banner
+  hosts: routers
+  gather_facts: false
+  vars_files: banner.cfg
+
+  tasks:
+    - name: Use Banner resource module [Cisco IOS]
+      cisco.ios.ios_banner:
+        state: present
+        banner: motd
+        text: "{{ cfg }}"
+      when: ansible_network_os == 'ios'
+
+    - name: Use Banner resource module [Cisco NX-OS]
+      cisco.nxos.nxos_banner:
+        state: present
+        banner: motd
+        text: "{{ cfg }}"
+      when: ansible_network_os == 'nxos'
+
+    - name: Use Banner resource module [Cisco IOS XR]
+      cisco.iosxr.iosxr_banner:
+        state: present
+        banner: motd
+        text: "{{ cfg }}"
+      when: ansible_network_os == 'iosxr'
