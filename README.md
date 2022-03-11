@@ -1,4 +1,5 @@
 # Network Resource Modules Demo
+[![Ansible Lint](https://github.com/nleiva/ansible-net-modules/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/nleiva/ansible-net-modules/actions/workflows/ansible-lint.yml)
 
 ## SNMP
 
