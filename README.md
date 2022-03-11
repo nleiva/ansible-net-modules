@@ -11,3 +11,9 @@ ansible-navigator run snmp.yml
 
 - [nxos](https://github.com/ansible-collections/cisco.nxos/issues/433)
 - [iosxr](https://github.com/ansible-collections/cisco.iosxr/issues/215)
+
+## L3 Interfaces
+
+```bash
+ansible-navigator run l3_interface.yml
+```

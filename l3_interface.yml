@@ -1,0 +1,23 @@
+- name: Configure Interface
+  hosts: routers
+  gather_facts: true
+  vars_files: l3_interface.cfg
+
+  tasks:
+    - name: Use L3 Interfaces resource module [Cisco IOS]
+      cisco.ios.ios_l3_interfaces:
+        state: merged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'ios'
+
+    - name: Use L3 Interfaces resource module [Cisco NX-OS]
+      cisco.nxos.nxos_l3_interfaces:
+        state: merged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'nxos'
+
+    - name: Use L3 Interfaces resource module [Cisco IOS XR]
+      cisco.iosxr.iosxr_l3_interfaces:
+        state: merged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'iosxr'
