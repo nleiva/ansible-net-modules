@@ -1,0 +1,23 @@
+- name: Configure BGP Global
+  hosts: routers
+  gather_facts: false
+  vars_files: bgp_global.cfg
+
+  tasks:
+    - name: Use BGP Global resource module [Cisco IOS]
+      cisco.ios.ios_bgp_global:
+        state: purged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'ios'
+
+    - name: Use BGP Global resource module [Cisco NX-OS]
+      cisco.nxos.nxos_bgp_global:
+        state: purged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'nxos'
+
+    - name: Use BGP Global resource module [Cisco IOS XR]
+      cisco.iosxr.iosxr_bgp_global:
+        state: purged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'iosxr'
