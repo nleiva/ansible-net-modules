@@ -2,8 +2,8 @@
 ansible-navigator:
   ansible:
     config: ansible.cfg
-    inventories:
-    - ./hosts
+    inventories: 
+      - ./hosts
 
   editor:
     command: code -g {filename}:{line_number}
@@ -22,6 +22,6 @@ ansible-navigator:
         - USER
 
   playbook-artifact:
-    enable: False
+    enable: false
 
   mode: stdout
