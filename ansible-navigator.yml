@@ -2,7 +2,7 @@
 ansible-navigator:
   ansible:
     config: ansible.cfg
-    inventories: 
+    inventories:
       - ./hosts
 
   editor:
