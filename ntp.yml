@@ -1,0 +1,23 @@
+- name: Configure NTP
+  hosts: routers
+  gather_facts: false
+  vars_files: ntp.cfg
+
+  tasks:
+    - name: Use NTP resource module [Cisco IOS]
+      cisco.ios.ntp_global:
+        state: merged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'ios'
+
+    - name: Use NTP resource module [Cisco NX-OS]
+      cisco.nxos.ntp_global:
+        state: merged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'nxos'
+
+    - name: Use NTP resource module [Cisco IOS XR]
+      cisco.iosxr.ntp_global:
+        state: merged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'iosxr'
