@@ -5,19 +5,19 @@
 
   tasks:
     - name: Use NTP resource module [Cisco IOS]
-      cisco.ios.ntp_global:
+      cisco.ios.ios_ntp_global:
         state: merged
         config: "{{ cfg }}"
       when: ansible_network_os == 'ios'
 
     - name: Use NTP resource module [Cisco NX-OS]
-      cisco.nxos.ntp_global:
+      cisco.nxos.nxos_ntp_global:
         state: merged
         config: "{{ cfg }}"
       when: ansible_network_os == 'nxos'
 
     - name: Use NTP resource module [Cisco IOS XR]
-      cisco.iosxr.ntp_global:
+      cisco.iosxr.iosxr_ntp_global:
         state: merged
         config: "{{ cfg }}"
       when: ansible_network_os == 'iosxr'

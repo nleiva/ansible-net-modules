@@ -5,19 +5,19 @@
 
   tasks:
     - name: Use SNMP resource module [Cisco IOS]
-      cisco.ios.snmp_server:
+      cisco.ios.ios_snmp_server:
         state: merged
         config: "{{ cfg }}"
       when: ansible_network_os == 'ios'
 
     - name: Use SNMP resource module [Cisco NX-OS]
-      cisco.nxos.snmp_server:
+      cisco.nxos.nxos_snmp_server:
         state: merged
         config: "{{ cfg }}"
       when: ansible_network_os == 'nxos'
 
     - name: Use SNMP resource module [Cisco IOS XR]
-      cisco.iosxr.snmp_server:
+      cisco.iosxr.iosxr_snmp_server:
         state: merged
         config: "{{ cfg }}"
       when: ansible_network_os == 'iosxr'

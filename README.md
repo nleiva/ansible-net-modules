@@ -1,10 +1,10 @@
 # Network Resource Modules Demo
 [![Ansible Lint](https://github.com/nleiva/ansible-net-modules/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/nleiva/ansible-net-modules/actions/workflows/ansible-lint.yml)
 
-## L3 Interfaces
+## ACL
 
 ```bash
-ansible-navigator run l3_interface.yml
+ansible-navigator run acl.yml
 ```
 
 ## Banner
@@ -13,10 +13,16 @@ ansible-navigator run l3_interface.yml
 ansible-navigator run banner.yml
 ```
 
-## SNMP
+## BGP Global
 
 ```bash
-ansible-navigator run snmp.yml
+ansible-navigator run bgp_global.yml
+```
+
+## L3 Interfaces
+
+```bash
+ansible-navigator run l3_interface.yml
 ```
 
 ## NTP
@@ -25,15 +31,22 @@ ansible-navigator run snmp.yml
 ansible-navigator run ntp.yml
 ```
 
-## BGP Global
+## SNMP
 
 ```bash
-ansible-navigator run bgp_global.yml
+ansible-navigator run snmp.yml
 ```
 
 ### Models
 
 - [resource_module_models](https://github.com/ansible-network/resource_module_models/tree/master/models)
+
+### Collections
+
+- [Arista EOS](https://github.com/ansible-collections/arista.eos)
+- [Cisco IOS](https://github.com/ansible-collections/cisco.ios)
+- [Cisco IOS XR](https://github.com/ansible-collections/cisco.iosxr)
+- [Cisco NX-OS](https://github.com/ansible-collections/cisco.nxos)
 
 #### Issues
 
