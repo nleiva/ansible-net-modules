@@ -1,7 +1,7 @@
 - name: Configure ACL
   hosts: routers
   gather_facts: false
-  vars_files: acl.cfg
+  vars_files: acls.cfg
 
   tasks:
     - name: Use ACL resource module [Cisco IOS]

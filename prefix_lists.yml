@@ -1,0 +1,23 @@
+- name: Configure Prefix List
+  hosts: routers
+  gather_facts: false
+  vars_files: prefix_lists.cfg
+
+  tasks:
+    - name: Use Prefix List resource module [Cisco IOS]
+      cisco.ios.ios_prefix_lists:
+        state: replaced
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'ios'
+
+    - name: Use Prefix List resource module [Cisco NX-OS]
+      cisco.nxos.nxos_prefix_lists:
+        state: replaced
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'nxos'
+
+    - name: Use Prefix List resource module [Cisco IOS XR]
+      cisco.iosxr.iosxr_prefix_lists:
+        state: replaced
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'iosxr'
