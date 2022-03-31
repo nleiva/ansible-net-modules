@@ -2,8 +2,6 @@
 ansible-navigator:
   ansible:
     config: ansible.cfg
-    inventories:
-      - ./hosts
 
   editor:
     command: code -g {filename}:{line_number}

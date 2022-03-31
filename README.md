@@ -19,6 +19,12 @@ ansible-navigator run banner.yml
 ansible-navigator run bgp_global.yml
 ```
 
+## Hostname
+
+```bash
+ansible-navigator run hostname.yml
+```
+
 ## L3 Interfaces
 
 ```bash

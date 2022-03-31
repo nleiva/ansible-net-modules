@@ -1,0 +1,23 @@
+- name: Configure a Hostname
+  hosts: routers
+  gather_facts: false
+  vars_files: hostname.cfg
+
+  tasks:
+    - name: Use Hostname resource module [Cisco IOS]
+      cisco.ios.ios_hostname:
+        state: overridden
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'ios'
+
+    - name: Use Hostname resource module [Cisco NX-OS]
+      cisco.nxos.nxos_hostname:
+        state: overridden
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'nxos'
+
+    - name: Use Hostname resource module [Cisco IOS XR]
+      cisco.iosxr.iosxr_hostname:
+        state: overridden
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'iosxr'
