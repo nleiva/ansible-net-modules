@@ -1,0 +1,23 @@
+- name: Configure OSPFv2
+  hosts: ios,nxos
+  gather_facts: false
+  vars_files: ospfv2.cfg
+
+  tasks:
+    - name: Use OSPFv2 resource module [Cisco IOS]
+      cisco.ios.ios_ospfv2:
+        state: replaced
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'ios'
+
+    - name: Use OSPFv2 resource module [Cisco NX-OS]
+      cisco.nxos.nxos_ospfv2:
+        state: replaced
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'nxos'
+
+    - name: Use OSPFv2 resource module [Cisco IOS XR]
+      cisco.iosxr.iosxr_ospfv2:
+        state: replaced
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'iosxr'

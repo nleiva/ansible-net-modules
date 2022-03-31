@@ -31,15 +31,21 @@ ansible-navigator run l3_interface.yml
 ansible-navigator run ntp.yml
 ```
 
+## OSPFv2
+
+```bash
+ansible-navigator run ospfv2.yml
+```
+
 ## SNMP
 
 ```bash
 ansible-navigator run snmp.yml
 ```
 
-### Models
+### More information
 
-- [resource_module_models](https://github.com/ansible-network/resource_module_models/tree/master/models)
+- [Network Resource Modules](https://github.com/nleiva/ansible-links#network-resource-modules)
 
 ### Collections
 
@@ -52,4 +58,5 @@ ansible-navigator run snmp.yml
 
 - [nxos snmp](https://github.com/ansible-collections/cisco.nxos/issues/433)
 - [nxos ntp](https://github.com/ansible-collections/cisco.nxos/issues/450)
+- [iosxr ospfv2](https://github.com/ansible-collections/cisco.iosxr/issues/227) 
 - iosxr: `bgp.router_id` nxos: `router_id` ios: `bgp.router_id.address`
