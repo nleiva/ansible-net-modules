@@ -1,0 +1,23 @@
+- name: Configure Logging
+  hosts: iosxr,nxos
+  gather_facts: false
+  vars_files: logging.cfg
+
+  tasks:
+    - name: Use Logging resource module [Cisco IOS]
+      cisco.ios.ios_logging_global:
+        state: merged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'ios'
+
+    - name: Use Logging resource module [Cisco NX-OS]
+      cisco.nxos.nxos_logging_global:
+        state: merged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'nxos'
+
+    - name: Use Logging resource module [Cisco IOS XR]
+      cisco.iosxr.iosxr_logging_global:
+        state: merged
+        config: "{{ cfg }}"
+      when: ansible_network_os == 'iosxr'
