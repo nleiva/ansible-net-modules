@@ -1,5 +1,5 @@
 # This makes linter to fully ignore rules/tags listed below
-skip_list:  
+skip_list:
   - git-latest
 
 # This makes the linter display but not fail for rules/tags listed below:
