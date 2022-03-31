@@ -1,0 +1,26 @@
+- name: Configure User
+  hosts: routers
+  gather_facts: false
+  vars_files: user.cfg
+
+  tasks:
+    - name: Use User resource module [Cisco IOS]
+      cisco.ios.ios_user:
+        name: "{{ cfg.user }}"
+        configured_password: "{{ cfg.password }}"
+        state: present
+      when: ansible_network_os == 'ios'
+
+    - name: Use User resource module [Cisco NX-OS]
+      cisco.nxos.nxos_user:
+        name: "{{ cfg.user }}"
+        configured_password: "{{ cfg.password }}"
+        state: present
+      when: ansible_network_os == 'nxos'
+
+    - name: Use User resource module [Cisco IOS XR]
+      cisco.iosxr.iosxr_user:
+        name: "{{ cfg.user }}"
+        configured_password: "{{ cfg.password }}"
+        state: present
+      when: ansible_network_os == 'iosxr'

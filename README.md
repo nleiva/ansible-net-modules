@@ -61,11 +61,17 @@ ansible-navigator run prefix_lists.yml
 ansible-navigator run snmp.yml
 ```
 
+## User
+
+```bash
+ansible-navigator run user.yml
+```
+
 ### More information
 
 - [Network Resource Modules](https://github.com/nleiva/ansible-links#network-resource-modules)
 
-### Collections
+#### Collections
 
 - [Arista EOS](https://github.com/ansible-collections/arista.eos)
 - [Cisco IOS](https://github.com/ansible-collections/cisco.ios)
