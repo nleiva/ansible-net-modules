@@ -1,5 +1,5 @@
 - name: Configure SNMP
-  hosts: routers
+  hosts: routers:!nxos
   gather_facts: false
   vars_files: snmp.cfg
 
