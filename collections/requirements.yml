@@ -1,7 +1,8 @@
+# https://github.com/nleiva/ee-builds/blob/master/ee-network-image/requirements.yml
 collections:
   - name: cisco.nxos
-    version: 2.9.0
+    version: 2.9.1
   - name: cisco.iosxr
-    version: 2.8.1
+    version: 2.9.0
   - name: cisco.ios
-    version: 2.7.2
+    version: 2.8.1
