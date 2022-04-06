@@ -13,7 +13,7 @@ sandbox-iosxr-1.cisco.com
 sandbox-nxos-1.cisco.com
 
 [routers:vars]
-ansible_connection=network_cli
+ansible_connection=ansible.netcommon.network_cli
 
 [ios:vars]
 ansible_user=developer
