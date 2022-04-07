@@ -1,25 +1,22 @@
 ---
 ansible-navigator:
   ansible:
-    config: ansible.cfg
-
+    config:
+      path: ansible.cfg
   editor:
     command: code -g {filename}:{line_number}
     console: false
-
-  logging:
-    level: warning
-
   execution-environment:
     container-engine: podman
     enabled: true
-    pull-policy: missing
-    image: quay.io/nleiva/ee-network-image
     environment-variables:
       pass:
-        - USER
-
+      - USER
+    image: quay.io/nleiva/ee-network-image
+    pull:
+      policy: missing
+  logging:
+    level: warning
+  mode: stdout
   playbook-artifact:
     enable: false
-
-  mode: stdout

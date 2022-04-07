@@ -1,19 +1,29 @@
 # Network Resource Modules Demo
 [![Ansible Lint](https://github.com/nleiva/ansible-net-modules/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/nleiva/ansible-net-modules/actions/workflows/ansible-lint.yml)
 
-## ACL
+## Dependencies
+
+You need to install Ansible Navigator to run these examples. You can install it with `pip install ansible-navigator==2.0.0rc1`. This way you can run the playbooks in an Execution Environment, which Ansible Navigator will pull for you. 
+
+I use [podman](https://podman.io/) as my container engine (`container-engine`) to fire off the Execution Environment. You can change to another alternative (docker) in the [ansible navigator config file](ansible-navigator.yml).
+
+The examples run against [DevNet always-on devices](https://developer.cisco.com/site/sandbox/). 
+
+## Examples
+
+### ACL
 
 ```bash
 ansible-navigator run acls.yml
 ```
 
-## Banner
+### Banner
 
 ```bash
 ansible-navigator run banner.yml
 ```
 
-## BGP Global
+### BGP Global
 
 ```bash
 ansible-navigator run bgp_global.yml
@@ -25,19 +35,19 @@ ansible-navigator run bgp_global.yml
 ansible-navigator run hostname.yml
 ```
 
-## L3 Interfaces
+### L3 Interfaces
 
 ```bash
 ansible-navigator run l3_interface.yml
 ```
 
-## Logging
+### Logging
 
 ```bash
 ansible-navigator run logging.yml
 ```
 
-## NTP
+### NTP
 
 ```bash
 ansible-navigator run ntp.yml
@@ -49,36 +59,36 @@ ansible-navigator run ntp.yml
 ansible-navigator run ospfv2.yml
 ```
 
-## Prefix List
+### Prefix List
 
 ```bash
 ansible-navigator run prefix_lists.yml
 ```
 
-## SNMP
+### SNMP
 
 ```bash
 ansible-navigator run snmp.yml
 ```
 
-## User
+### User
 
 ```bash
 ansible-navigator run user.yml
 ```
 
-### More information
+## More information
 
 - [Network Resource Modules](https://github.com/nleiva/ansible-links#network-resource-modules)
 
-#### Collections
+### Collections
 
 - [Arista EOS](https://github.com/ansible-collections/arista.eos)
 - [Cisco IOS](https://github.com/ansible-collections/cisco.ios)
 - [Cisco IOS XR](https://github.com/ansible-collections/cisco.iosxr)
 - [Cisco NX-OS](https://github.com/ansible-collections/cisco.nxos)
 
-#### Issues
+### Issues
 
 - [nxos snmp](https://github.com/ansible-collections/cisco.nxos/issues/454)
 - [nxos ntp](https://github.com/ansible-collections/cisco.nxos/issues/450)
