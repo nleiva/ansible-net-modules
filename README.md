@@ -3,7 +3,7 @@
 
 ## Dependencies
 
-You need to install Ansible Navigator to run these examples. You can install it with `pip install ansible-navigator==2.0.0rc1`. This way you can run the playbooks in an Execution Environment, which Ansible Navigator will pull for you. 
+You need to install Ansible Navigator to run these examples. You can install it with `pip install ansible-navigator`. This way you can run the playbooks in an Execution Environment, which Ansible Navigator will pull for you. 
 
 I use [podman](https://podman.io/) as my container engine (`container-engine`) to fire off the Execution Environment. You can change to another alternative (docker) in the [ansible navigator config file](ansible-navigator.yml).
 
