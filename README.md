@@ -11,6 +11,14 @@ The examples run against [DevNet always-on devices](https://developer.cisco.com/
 
 ## Examples
 
+You can run any example by specifying the resource module in the variable `rm`.
+
+```bash
+ansible-navigator run main.yml -e rm=acls
+```
+
+Alternatively, you can run them directly as follows.
+
 ### ACL
 
 ```bash
