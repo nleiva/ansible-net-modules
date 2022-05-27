@@ -98,9 +98,4 @@ ansible-navigator run user.yml
 
 ### Issues
 
-- [nxos snmp](https://github.com/ansible-collections/cisco.nxos/issues/454)
-- [nxos ntp](https://github.com/ansible-collections/cisco.nxos/issues/450)
-- [iosxr ospfv2](https://github.com/ansible-collections/cisco.iosxr/issues/227)
-- [iosxr prefix_lists](https://github.com/ansible-collections/cisco.iosxr/issues/229)
-- [ios logging](https://github.com/ansible-collections/cisco.ios/issues/545)
 - iosxr: `bgp.router_id` nxos: `router_id` ios: `bgp.router_id.address`
