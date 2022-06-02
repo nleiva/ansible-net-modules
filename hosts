@@ -38,6 +38,7 @@ ansible_user=admin
 ansible_password=Admin_1234!
 ansible_network_os=nxos
 ansible_port=443
+ansible_host="sandbox-nxos-1.cisco.com"
 ansible_connection=httpapi
 ansible_httpapi_use_ssl=yes
 ansible_httpapi_validate_certs=no
