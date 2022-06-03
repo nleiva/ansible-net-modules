@@ -18,27 +18,27 @@ ansible_connection=ansible.netcommon.network_cli
 [ios:vars]
 ansible_user=developer
 ansible_password=C1sco12345
-ansible_network_os=ios
+ansible_network_os=cisco.ios.ios
 ansible_port=22
-#NETCONF Port: 830
-#gRPC Telemetry Port: 57500
-#RESTCONF Port: 443 (HTTPS)
+# NETCONF Port: 830
+# gRPC Telemetry Port: 57500
+# RESTCONF Port: 443
 
 [iosxr:vars]
 ansible_user=admin
 ansible_password=C1sco12345
-ansible_network_os=iosxr
+ansible_network_os=cisco.iosxr.iosxr
 ansible_port=22
-#NETCONF Port:	830
-#XR bash Port:	57722
-#gRPC Port:	57777
+# NETCONF Port: 830
+# XR bash Port: 57722
+# gRPC Port: 57777
 
 [nxos:vars]
 ansible_user=admin
 ansible_password=Admin_1234!
-ansible_network_os=nxos
+ansible_network_os=cisco.nxos.nxos
 ansible_port=443
 ansible_host="sandbox-nxos-1.cisco.com"
-ansible_connection=httpapi
+ansible_connection=ansible.netcommon.httpapi
 ansible_httpapi_use_ssl=yes
 ansible_httpapi_validate_certs=no
