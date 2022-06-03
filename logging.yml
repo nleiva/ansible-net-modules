@@ -8,16 +8,16 @@
       cisco.ios.ios_logging_global:
         state: merged
         config: "{{ cfg }}"
-      when: ansible_network_os == 'ios'
+      when: ansible_network_os == 'cisco.ios.ios'
 
     - name: Use Logging resource module [Cisco NX-OS]
       cisco.nxos.nxos_logging_global:
         state: merged
         config: "{{ cfg }}"
-      when: ansible_network_os == 'nxos'
+      when: ansible_network_os == 'cisco.nxos.nxos'
 
     - name: Use Logging resource module [Cisco IOS XR]
       cisco.iosxr.iosxr_logging_global:
         state: merged
         config: "{{ cfg }}"
-      when: ansible_network_os == 'iosxr'
+      when: ansible_network_os == 'cisco.iosxr.iosxr'

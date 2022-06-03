@@ -9,18 +9,18 @@
         name: "{{ cfg.user }}"
         configured_password: "{{ cfg.password }}"
         state: present
-      when: ansible_network_os == 'ios'
+      when: ansible_network_os == 'cisco.ios.ios'
 
     - name: Use User resource module [Cisco NX-OS]
       cisco.nxos.nxos_user:
         name: "{{ cfg.user }}"
         configured_password: "{{ cfg.password }}"
         state: present
-      when: ansible_network_os == 'nxos'
+      when: ansible_network_os == 'cisco.nxos.nxos'
 
     - name: Use User resource module [Cisco IOS XR]
       cisco.iosxr.iosxr_user:
         name: "{{ cfg.user }}"
         configured_password: "{{ cfg.password }}"
         state: present
-      when: ansible_network_os == 'iosxr'
+      when: ansible_network_os == 'cisco.iosxr.iosxr'

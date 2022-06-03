@@ -8,16 +8,16 @@
       cisco.ios.ios_l3_interfaces:
         state: merged
         config: "{{ cfg }}"
-      when: ansible_network_os == 'ios'
+      when: ansible_network_os == 'cisco.ios.ios'
 
     - name: Use L3 Interfaces resource module [Cisco NX-OS]
       cisco.nxos.nxos_l3_interfaces:
         state: merged
         config: "{{ cfg }}"
-      when: ansible_network_os == 'nxos'
+      when: ansible_network_os == 'cisco.nxos.nxos'
 
     - name: Use L3 Interfaces resource module [Cisco IOS XR]
       cisco.iosxr.iosxr_l3_interfaces:
         state: merged
         config: "{{ cfg }}"
-      when: ansible_network_os == 'iosxr'
+      when: ansible_network_os == 'cisco.iosxr.iosxr'
