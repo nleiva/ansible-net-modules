@@ -1,6 +1,6 @@
 - name: Configure User
   hosts: routers
-  gather_facts: false
+  gather_facts: true
   vars_files: user.cfg
 
   tasks:
