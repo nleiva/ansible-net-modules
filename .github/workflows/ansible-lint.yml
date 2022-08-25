@@ -1,19 +1,10 @@
 name: Ansible Lint
 
 # Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+on: [push, pull_request, workflow_dispatch]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "lint"
   lint:
     runs-on: ubuntu-latest
 
@@ -23,5 +14,4 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Lint Ansible Playbook
-        uses: ansible/ansible-lint-action@v6.0.2
-
+        uses: ansible/ansible-lint-action@v6.3.0
